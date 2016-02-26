@@ -95,6 +95,7 @@ COPY docker-php-* /usr/local/bin/
 
 WORKDIR /var/www/html
 COPY php-fpm.conf /usr/local/etc/
+RUN cp /usr/src/php/php.ini-production /usr/local/etc/php/php.ini
 
 EXPOSE 9000
 CMD ["php-fpm"]
